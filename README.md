@@ -8,4 +8,4 @@ The Random User Page Generator project is a web application that leverages four 
 4. [Bacon Ipsum AP](https://baconipsum.com/api/?type=all-meat&sentences=1&start-with-lorem=1)
 
 ## 〰️Screenshot
-![screenshot](webImg)
+![screenshot](webImg.jpg)
