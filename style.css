@@ -1,7 +1,7 @@
 
 .navbar{
     background-color: #363b40;
-    height: 120px;
+    height: 150px;
     right: 0;
     position: absolute;
 
@@ -10,7 +10,7 @@
 
 .footer{
     background-color: #363b40;
-    height: 87px;
+    height: 65px;
 }
 
 .container-fluid{
@@ -31,20 +31,108 @@
 }
 
 .friends-title{
-    margin-top: 90px;
+    margin-top: 20px;
     font-family: Marker Felt, fantasy;
     color: #000000;
+    font-size: 30px;
 }
 
 .title{
     margin-top: 30px;
     font-family: Marker Felt, fantasy;
     color: #000000;
-    font-size: 25px;
+    font-size: 30px;
 
 }
 
+#name{
+    font-family: Marker Felt, fantasy;
+    color: #08e459;
+    font-size: 30px;
+   
+}
 
+#location{
+    color: #ffffff;
+    font-size: 18px;
+   
+}
+
+#main-user{
+    margin-top: 12px;
+    margin-left: 30px;
+}
+
+
+
+.user-image{
+    height: 130px;
+    width: 120px;
+    margin-left: 20px;
+    border-radius: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.484);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.user-image:hover {
+    transform: scale(1.1);
+  }
+  
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+li {
+margin-bottom: 15px;
+padding: 15px;
+background-color: #5054576b;
+color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+li:hover {
+background-color: #08e459; /* Darker shade on hover */
+transform: scale(1.02);
+}
+
+
+#quote-content>h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+#about-me-content{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+#pokemon-image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    background-size: 100%;
+    justify-self: center;
+}
+
+#pokemon-text {
+    vertical-align: middle;
+    color: #63676c;
+}
+
+#pokemon-container {
+    font-size: 20px;
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: minmax(150px, 150px) minmax(200px, 400px);
+    align-items: center;
+    justify-self: baseline;
+    border-bottom: 1px solid #2c3e50;
+}
 
 
 /* CSS */
@@ -65,7 +153,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 25px;
+  margin-top: 10px;
   
 }
 
@@ -76,12 +164,6 @@
 
 .generateBtn{
     margin-left: 33%;
-}
-.saveBtn{
-    margin-left: 25px;
-}
-.loadBtn{
-    margin-left: 25px;
 }
 
 

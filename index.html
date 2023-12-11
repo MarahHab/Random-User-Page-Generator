@@ -10,58 +10,84 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-   
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
 
     <title>Random User Page Generator</title>
   </head>
   <body>
     <!-- Header -->
-    <nav class="navbar ">
-      
+    <nav class="navbar">
+      <div class="row">
+        <!-- img -->
+        <script id="main-user-image-template" type="text/x-handlebars-template">
+          <img src="{{mainUserImage}}" class="user-image" alt="User Image" />
+        </script>
+        <div id="main-user-image"></div>
+
+        <!-- name & location -->
+        <script id="main-user-template" type="text/x-handlebars-template">
+          <ul><h4 id="name">{{mainUserName}}</h4></ul>
+          <ul><h4 id="location">{{mainUserLocation}}</h4></ul>
+        </script>
+
+        <div id="main-user"></div>
+      </div>
     </nav>
 
-
-    
     <!-- Content Section -->
-    
+
     <div class="container-fluid">
+      <div class="row">
+        <div class="left-section col-md-9">
+          <h4 class="title">Favorite Quote</h4>
+          <!-- Quote -->
+          <script id="quote-template" type="text/x-handlebars-template">
+            <h5>"{{quoteContent}}"</h5>
+          </script>
+          <div id="quote-content"></div>
+          <p id="author">- Kanye West</p>
+          <!-- Pokemon -->
+          <script id="pokemon-template" type="text/x-handlebars-template">
+            <img
+              id="pokemon-image "
+              src="{{pokemonImage}}"
+              alt="Pokemon Image"
+            />
+            <h5 id="pokemon-text">{{pokemonName}}</h5>
+          </script>
+          <div id="pokemon-container"></div>
+          <!-- About Me -->
+          <h4 class="title">About Me</h4>
+          <script id="bacon-template" type="text/x-handlebars-template">
+            <h5>"{{baconContent}}"</h5>
+          </script>
+          <div id="about-me-content"></div>
+        </div>
 
-
-        <div class="row">
-
-        <!-- Content for the left section -->
-          <div class="left-section col-md-9">
-            
-            <h4 class="title">Favorite Quote</h4>
-            <div class="quote-content"></div>
-
-
-            <h4 class="title">About Me</h4>
-            <div class="about-me-content"></div>
-
-          </div>
-    
         <!-- Content for the right section -->
-          <div class="right-section col-md-3">            
-            <h4 class="friends-title">Friends</h4>
-            <div class="friends-names-container"></div>
-          </div>
-
-
+        <div class="right-section col-md-3">
+          <h4 class="friends-title">Friends</h4>
+          <script id="friends-template" type="text/x-handlebars-template">
+            <ul>
+              <li id="friends">⭐ {{friendName}}</li>
+            </ul>
+          </script>
+          <div id="friends"></div>
+          <div class="friends-names-container"></div>
         </div>
       </div>
-    
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
-      <button class="generateBtn button-33" role="button">Generate User</button>
-      <button class="saveBtn button-33" role="button">Save User</button>
-      <button class="loadBtn button-33" role="button">Load User</button>
+      <button class="generateBtn button-33" onclick="generate()" role="button">
+        Generate User
+      </button>
     </footer>
 
-
-    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="data.js"></script>
+    <script src="Renderer.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
