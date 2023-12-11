@@ -121,7 +121,10 @@ transform: scale(1.02);
 
 #pokemon-text {
     vertical-align: middle;
-    color: #63676c;
+    color: #08e459;
+}
+span{
+    color: #000000;
 }
 
 #pokemon-container {
